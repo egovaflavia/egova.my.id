@@ -1,0 +1,31 @@
+services:
+  egova-profile:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: egova-my-id
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8085}:80"
+    networks:
+      - homeserver-net
+
+  # Opsional: Aktifkan jika ingin menjalankan Cloudflare Tunnel langsung dari compose ini
+  # Jalankan dengan: CLOUDFLARE_TUNNEL_TOKEN=xxx docker compose --profile tunnel up -d
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: egova-cloudflared
+    restart: unless-stopped
+    profiles:
+      - tunnel
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN:-}
+    depends_on:
+      - egova-profile
+    networks:
+      - homeserver-net
+
+networks:
+  homeserver-net:
+    driver: bridge

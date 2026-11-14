@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Egova Flavia (@egovaflavia) — Full-Stack Developer & Healthcare IT Engineer | egova.my.id</title>
+  <meta name="description" content="Portfolio resmi Egova Flavia (egova.my.id) — Full-Stack Web Developer di Semen Padang Hospital, kreator LokerSumbar.info, spesialis Laravel, Livewire, Filament, Vue.js, Sistem Informasi Rumah Sakit (SIMRS), dan DevOps Homeserver." />
+  <meta name="author" content="Egova Flavia" />
+  <meta name="keywords" content="Egova Flavia, egovaflavia, egova.my.id, Programmer Padang, Semen Padang Hospital, LokerSumbar, Laravel Developer Indonesia, Livewire, Filament, SIMRS, Bridging BPJS" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://egova.my.id/" />
+  <meta property="og:title" content="Egova Flavia — Full-Stack Web Developer & Healthcare IT | egova.my.id" />
+  <meta property="og:description" content="Membangun ekosistem Sistem Informasi Rumah Sakit (SIMRS), aplikasi web reaktif dengan Laravel/Livewire/Vue.js, dan infrastruktur Homeserver." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/50259464?v=4" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/50259464?v=4" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-[#090d16] text-slate-100 antialiased selection:bg-emerald-500/30 selection:text-emerald-300 bg-grid-pattern min-h-screen relative overflow-x-hidden">
+
+  <!-- Top Ambient Glow -->
+  <div class="hero-glow pointer-events-none fixed inset-x-0 top-0 h-[550px] z-0"></div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 nav-blur bg-[#090d16]/80 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Brand -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="relative flex items-center justify-center w-9 h-9 rounded-xl bg-slate-900 border border-slate-700/80 group-hover:border-emerald-500/60 transition-colors overflow-hidden">
+          <img src="https://avatars.githubusercontent.com/u/50259464?v=4" alt="Egova Flavia" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-mono font-bold text-sm tracking-tight text-white">egova<span class="text-emerald-400">.my.id</span></span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              <span class="relative inline-flex w-1.5 h-1.5 rounded-full bg-emerald-400 status-dot"></span>
+              ONLINE
+            </span>
+          </div>
+          <span class="text-[11px] text-slate-400 font-mono">@egovaflavia • Padang, ID</span>
+        </div>
+      </a>
+
+      <!-- Nav Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#tentang" class="hover:text-emerald-400 transition-colors">Tentang</a>
+        <a href="#portfolio" class="hover:text-emerald-400 transition-colors">Proyek Unggulan</a>
+        <a href="#stack" class="hover:text-emerald-400 transition-colors">Tech Stack</a>
+        <a href="#repositori" class="hover:text-emerald-400 transition-colors">Repo Publik</a>
+        <a href="#homeserver" class="hover:text-emerald-400 transition-colors">Homeserver</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2.5">
+        <button id="theme-toggle" type="button" aria-label="Ganti Tema" class="p-2 rounded-lg bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-emerald-400 hover:border-emerald-500/40 transition-colors" title="Ganti Mode Gelap / Terang">
+          <i data-lucide="sun-moon" class="w-4 h-4"></i>
+        </button>
+        <a href="https://github.com/egovaflavia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-mono font-semibold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition-all shadow-lg shadow-emerald-500/20">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>GitHub Profile</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10">
+
+    <!-- HERO SECTION -->
+    <section id="tentang" class="pt-12 pb-20 md:pt-20 md:pb-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          <!-- Left Column: Profile & Intro -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Status Pill -->
+            <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs font-mono text-slate-300">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>Self-Hosted on Homeserver</span>
+              <span class="text-slate-600">•</span>
+              <span class="text-emerald-400">Semen Padang Hospital IT</span>
+            </div>
+
+            <!-- Identity & Headline -->
+            <div class="flex items-center gap-4">
+              <img src="https://avatars.githubusercontent.com/u/50259464?v=4" alt="Foto Profil Egova Flavia" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl border-2 border-emerald-500/50 shadow-xl shadow-emerald-500/10 object-cover" />
+              <div>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+                  Egova Flavia
+                </h1>
+                <p class="font-mono text-sm text-emerald-400 mt-1">
+                  @egovaflavia • <span class="italic text-slate-400">"Agak-agak kiro-kiro"</span>
+                </p>
+              </div>
+            </div>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-200 leading-snug">
+              Full-Stack Web Developer yang merancang <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Sistem Informasi Rumah Sakit (SIMRS)</span>, aplikasi web reaktif, dan infrastruktur <span class="font-mono text-emerald-400">Homeserver</span>.
+            </h2>
+
+            <p class="text-slate-300 text-base leading-relaxed">
+              Berbasis di <strong>Padang, Sumatera Barat</strong>. Berfokus pada pengembangan ekosistem digital kesehatan di <strong>Semen Padang Hospital</strong> (Medical Check-Up, Bridging BPJS & JKN Mobile, EMR, SIMLAB), pengelola portal karir <a href="https://lokersumbar.info/" target="_blank" rel="noopener" class="text-emerald-400 underline decoration-emerald-500/40 hover:decoration-emerald-400 font-medium">LokerSumbar.info</a>, serta pegiat open-source tutorial <strong>Laravel, Livewire, Filament, Vue.js, Docker, & AI Workflow</strong>.
+            </p>
+
+            <!-- Meta Info Badges -->
+            <div class="flex flex-wrap gap-3 text-xs font-mono text-slate-300 pt-1">
+              <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/70 border border-slate-800">
+                <i data-lucide="building-2" class="w-4 h-4 text-emerald-400"></i>
+                <span>Semen Padang Hospital</span>
+              </div>
+              <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/70 border border-slate-800">
+                <i data-lucide="map-pin" class="w-4 h-4 text-cyan-400"></i>
+                <span>Padang, Sumatera Barat - ID</span>
+              </div>
+              <a href="https://lokersumbar.info/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/70 border border-slate-800 hover:border-emerald-500/50 transition-colors">
+                <i data-lucide="globe" class="w-4 h-4 text-amber-400"></i>
+                <span>lokersumbar.info</span>
+              </a>
+              <a href="https://x.com/egovaflavia" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/70 border border-slate-800 hover:border-emerald-500/50 transition-colors">
+                <i data-lucide="at-sign" class="w-4 h-4 text-sky-400"></i>
+                <span>egovaflavia</span>
+              </a>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap items-center gap-3.5 pt-2">
+              <a href="#portfolio" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 shadow-lg shadow-emerald-500/20 transition-all">
+                <i data-lucide="layers" class="w-4 h-4"></i>
+                <span>Jelajahi Proyek Unggulan</span>
+              </a>
+              <a href="#repositori" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm bg-slate-900/90 hover:bg-slate-800 text-white border border-slate-700/80 transition-all">
+                <i data-lucide="code-2" class="w-4 h-4 text-emerald-400"></i>
+                <span>Eksplorasi 135+ Repo GitHub</span>
+              </a>
+            </div>
+
+            <!-- Key Metrics Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
+              <div class="glass-card rounded-xl p-4">
+                <div id="stat-public-repos" class="text-2xl font-extrabold font-mono text-emerald-400">135+</div>
+                <div class="text-xs text-slate-400 mt-0.5">Public Repositories</div>
+              </div>
+              <div class="glass-card rounded-xl p-4">
+                <div class="text-2xl font-extrabold font-mono text-cyan-400">60+</div>
+                <div class="text-xs text-slate-400 mt-0.5">Enterprise & Private Apps</div>
+              </div>
+              <div class="glass-card rounded-xl p-4">
+                <div class="text-2xl font-extrabold font-mono text-amber-400">2019</div>
+                <div class="text-xs text-slate-400 mt-0.5">Aktif di GitHub (7+ Thn)</div>
+              </div>
+              <div class="glass-card rounded-xl p-4">
+                <div id="stat-followers" class="text-2xl font-extrabold font-mono text-purple-400">29</div>
+                <div class="text-xs text-slate-400 mt-0.5">GitHub Followers</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Homeserver Terminal -->
+          <div class="lg:col-span-5">
+            <div class="terminal-window rounded-2xl overflow-hidden">
+              <!-- Terminal Header -->
+              <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                </div>
+                <div class="text-xs font-mono text-slate-400 flex items-center gap-1.5">
+                  <i data-lucide="terminal" class="w-3.5 h-3.5 text-emerald-400"></i>
+                  <span>egova@egova.my.id: ~ (zsh)</span>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">SSH</span>
+              </div>
+
+              <!-- Quick Command Chips -->
+              <div class="px-4 py-2.5 bg-slate-950/60 border-b border-slate-800/80 flex items-center gap-1.5 flex-wrap">
+                <span class="text-[11px] font-mono text-slate-400 mr-1">Klik perintah:</span>
+                <button type="button" data-cmd="whoami" class="term-cmd-btn text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 hover:bg-emerald-500/20 text-emerald-300 border border-slate-700 hover:border-emerald-500/40 transition-colors">whoami</button>
+                <button type="button" data-cmd="stack" class="term-cmd-btn text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 hover:bg-emerald-500/20 text-emerald-300 border border-slate-700 hover:border-emerald-500/40 transition-colors">stack</button>
+                <button type="button" data-cmd="sph" class="term-cmd-btn text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 hover:bg-emerald-500/20 text-emerald-300 border border-slate-700 hover:border-emerald-500/40 transition-colors">sph</button>
+                <button type="button" data-cmd="repos" class="term-cmd-btn text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 hover:bg-emerald-500/20 text-emerald-300 border border-slate-700 hover:border-emerald-500/40 transition-colors">repos</button>
+                <button type="button" data-cmd="homeserver" class="term-cmd-btn text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 hover:bg-emerald-500/20 text-emerald-300 border border-slate-700 hover:border-emerald-500/40 transition-colors">homeserver</button>
+                <button type="button" data-cmd="clear" class="term-cmd-btn text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 hover:bg-rose-500/20 text-slate-300 border border-slate-700 hover:border-rose-500/40 transition-colors">clear</button>
+              </div>
+
+              <!-- Terminal Output Body -->
+              <div id="terminal-output" class="p-4 font-mono text-xs leading-relaxed h-[320px] overflow-y-auto space-y-2">
+                <div class="text-slate-400">Welcome to <span class="text-emerald-400 font-semibold">egova.my.id</span> Homeserver Node (Padang, ID)</div>
+                <div class="text-slate-400">Ketik <span class="text-cyan-400">help</span> atau klik tombol di atas untuk melihat informasi profil.</div>
+
+                <div class="mt-2">
+                  <span class="text-emerald-400">egova@homeserver</span>:<span class="text-cyan-400">~</span>$ <span class="text-white">neofetch --profile</span>
+                </div>
+                <div class="pl-2 space-y-1 text-slate-300 border-l-2 border-emerald-500/40 ml-1">
+                  <div><span class="text-emerald-400 font-semibold">Host</span>      : egova.my.id (Self-Hosted Homeserver)</div>
+                  <div><span class="text-emerald-400 font-semibold">Developer</span> : Egova Flavia (@egovaflavia)</div>
+                  <div><span class="text-emerald-400 font-semibold">Workplace</span> : Semen Padang Hospital</div>
+                  <div><span class="text-emerald-400 font-semibold">Primary</span>   : Laravel 12/13, Livewire 3, Filament 4, Vue 3</div>
+                  <div><span class="text-emerald-400 font-semibold">Infra</span>     : Docker, Lerd, WSL2, Nginx, Cloudflare Tunnel</div>
+                  <div><span class="text-emerald-400 font-semibold">Repos</span>     : 135 Public + 60+ Enterprise Private Repos</div>
+                </div>
+              </div>
+
+              <!-- Terminal Input Prompt -->
+              <form id="terminal-form" class="px-4 py-3 bg-slate-900/80 border-t border-slate-800 flex items-center gap-2 font-mono text-xs">
+                <span class="text-emerald-400 shrink-0">egova@homeserver:~$</span>
+                <input
+                  id="terminal-input"
+                  type="text"
+                  placeholder="Ketik perintah (mis. help, stack, sph)..."
+                  autocomplete="off"
+                  class="w-full bg-transparent text-white placeholder-slate-500 focus:outline-none"
+                />
+                <button type="submit" class="text-xs px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/30 transition-colors">
+                  Run
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PORTFOLIO SECTION -->
+    <section id="portfolio" class="py-20 border-t border-slate-800/70">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 mb-2">
+              <i data-lucide="award" class="w-4 h-4"></i>
+              <span>Production & Enterprise Portfolio</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+              Proyek Unggulan & Sistem Informasi
+            </h2>
+            <p class="text-slate-400 text-sm mt-2 max-w-2xl">
+              Rangkuman proyek nyata yang dibangun berdasarkan repositori produksi: mulai dari ekosistem kesehatan di <strong>Semen Padang Hospital</strong>, portal publik <strong>LokerSumbar.info</strong>, hingga solusi Enterprise & DevOps.
+            </p>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="flex flex-wrap gap-2">
+            <button type="button" data-category="all" class="portfolio-filter-btn filter-btn active text-xs font-mono px-3.5 py-2 rounded-xl border border-slate-800 bg-slate-900/70 text-slate-300 hover:border-emerald-500/40 transition-all">
+              Semua (8)
+            </button>
+            <button type="button" data-category="healthcare" class="portfolio-filter-btn filter-btn text-xs font-mono px-3.5 py-2 rounded-xl border border-slate-800 bg-slate-900/70 text-slate-300 hover:border-emerald-500/40 transition-all">
+              Healthcare & SIMRS (4)
+            </button>
+            <button type="button" data-category="platform" class="portfolio-filter-btn filter-btn text-xs font-mono px-3.5 py-2 rounded-xl border border-slate-800 bg-slate-900/70 text-slate-300 hover:border-emerald-500/40 transition-all">
+              Web Platform & CMS (2)
+            </button>
+            <button type="button" data-category="enterprise" class="portfolio-filter-btn filter-btn text-xs font-mono px-3.5 py-2 rounded-xl border border-slate-800 bg-slate-900/70 text-slate-300 hover:border-emerald-500/40 transition-all">
+              Enterprise, GIS & SPK (1)
+            </button>
+            <button type="button" data-category="devops" class="portfolio-filter-btn filter-btn text-xs font-mono px-3.5 py-2 rounded-xl border border-slate-800 bg-slate-900/70 text-slate-300 hover:border-emerald-500/40 transition-all">
+              DevOps & AI (1)
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Grid (Populated via JS) -->
+        <div id="featured-projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- TECH STACK & REPOSITORY ANALYTICS SECTION -->
+    <section id="stack" class="py-20 border-t border-slate-800/70 bg-slate-950/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-cyan-400 mb-2">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+            <span>Tech Stack & Engineering DNA</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+            Teknologi Berdasarkan 190+ Repositori GitHub
+          </h2>
+          <p class="text-slate-400 text-sm mt-2">
+            Kombinasi keahlian pengembangan perangkat lunak dari analisis bahasa pemrograman dan tumpukan teknologi pada seluruh repositori publik maupun privat <code class="text-emerald-400">@egovaflavia</code>.
+          </p>
+        </div>
+
+        <!-- Language Breakdown Bar -->
+        <div class="glass-card rounded-2xl p-6 mb-8">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <span class="text-xs font-mono font-semibold text-slate-300 uppercase tracking-wider">Distribusi Bahasa & Template di Repositori</span>
+            <span class="text-xs font-mono text-emerald-400">Dominan: Ecosystem Laravel (PHP/Blade) + Modern JS/Vue</span>
+          </div>
+          <div class="w-full h-3.5 rounded-full overflow-hidden flex bg-slate-900 p-0.5 gap-0.5">
+            <div class="h-full bg-[#f05340] rounded-l-full" style="width: 42%" title="PHP & Laravel Blade (42%)"></div>
+            <div class="h-full bg-[#f7df1e]" style="width: 26%" title="JavaScript & TypeScript (26%)"></div>
+            <div class="h-full bg-[#41b883]" style="width: 14%" title="Vue.js (14%)"></div>
+            <div class="h-full bg-[#38bdf8]" style="width: 11%" title="CSS / SCSS / Tailwind (11%)"></div>
+            <div class="h-full bg-[#2496ed] rounded-r-full" style="width: 7%" title="Dockerfile, Shell & Python (7%)"></div>
+          </div>
+          <div class="flex flex-wrap items-center gap-5 mt-4 text-xs font-mono text-slate-300">
+            <span class="inline-flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#f05340]"></span> PHP & Laravel Blade (42%)</span>
+            <span class="inline-flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#f7df1e]"></span> JavaScript & TypeScript (26%)</span>
+            <span class="inline-flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#41b883]"></span> Vue.js 3 (14%)</span>
+            <span class="inline-flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#38bdf8]"></span> Tailwind / SCSS (11%)</span>
+            <span class="inline-flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#2496ed]"></span> Docker, Shell & Python (7%)</span>
+          </div>
+        </div>
+
+        <!-- 4 Pillars Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Pillar 1 -->
+          <div class="glass-card rounded-2xl p-6">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
+              <i data-lucide="server-cog" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Backend & TALL Stack</h3>
+            <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+              Fondasi utama pengembangan aplikasi enterprise, portal berita/lowongan kerja, dan layanan webservice API.
+            </p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-emerald-300">Laravel 9–13</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-emerald-300">Livewire 3</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-emerald-300">Filament 4 CMS</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">PHP 8.x</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Node.js & Express</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">REST API & JWT</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">MySQL / PostgreSQL</span>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="glass-card rounded-2xl p-6">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4">
+              <i data-lucide="layout-template" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Frontend & Reactive UI</h3>
+            <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+              Pembuatan antarmuka pengguna modern yang responsif, interaktif, dan nyaman diakses di berbagai perangkat.
+            </p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-cyan-300">Vue.js 3</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-cyan-300">TypeScript</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-cyan-300">Tailwind CSS</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Alpine.js</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">React Dasar</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Blade Components</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Bootstrap & SCSS</span>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="glass-card rounded-2xl p-6">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-4">
+              <i data-lucide="stethoscope" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Healthcare IT & Integrations</h3>
+            <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+              Pengalaman mendalam mengintegrasikan sistem operasional rumah sakit dengan layanan kesehatan nasional.
+            </p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-amber-300">BPJS VClaim API</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-amber-300">JKN Mobile Service</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-amber-300">EMR / Rekam Medis</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">MCU & SIMLABOR</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Orthanc DICOM / OHIF</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">WAHA / Baileys WA API</span>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="glass-card rounded-2xl p-6">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-4">
+              <i data-lucide="container" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">DevOps, Homeserver & AI</h3>
+            <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+              Otomatisasi environment development, containerization aplikasi, self-hosting di homeserver, dan AI agents.
+            </p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-purple-300">Docker & Compose</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-purple-300">Cloudflare Tunnel</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-purple-300">Lerd (Podman) & WSL2</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Nginx Reverse Proxy</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">OpenClaw AI Agent</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Vibe Coding Workflow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLIC REPOSITORIES EXPLORER SECTION -->
+    <section id="repositori" class="py-20 border-t border-slate-800/70">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 mb-2">
+              <i data-lucide="git-branch" class="w-4 h-4"></i>
+              <span>Open Source, Guides & Starter Kits</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+              Eksplorasi Repositori Publik GitHub
+            </h2>
+            <p class="text-slate-400 text-sm mt-1">
+              Kumpulan starter-kit, dokumentasi teknis, setup Docker, dan catatan pembelajaran terbuka dari akun <a href="https://github.com/egovaflavia?tab=repositories" target="_blank" rel="noopener" class="text-emerald-400 underline">@egovaflavia</a>.
+            </p>
+          </div>
+
+          <!-- Live Sync Indicator -->
+          <div id="github-sync-status" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300 self-start md:self-auto">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Syncing with api.github.com...</span>
+          </div>
+        </div>
+
+        <!-- Search & Category Filter Bar -->
+        <div class="glass-card rounded-2xl p-4 mb-8 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+          <!-- Search Input -->
+          <div class="relative flex-1">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input
+              id="repo-search-input"
+              type="text"
+              placeholder="Cari repositori (misal: Laravel, Vue, Docker, WSL, OpenClaw, BPJS)..."
+              class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500/60 transition-colors"
+            />
+          </div>
+
+          <!-- Category Pills -->
+          <div class="flex flex-wrap items-center gap-1.5">
+            <button type="button" data-repo-cat="all" class="repo-filter-btn filter-btn active text-xs font-mono px-3 py-2 rounded-lg border border-slate-800 bg-slate-900/60 text-slate-300 transition-all">
+              Semua
+            </button>
+            <button type="button" data-repo-cat="laravel" class="repo-filter-btn filter-btn text-xs font-mono px-3 py-2 rounded-lg border border-slate-800 bg-slate-900/60 text-slate-300 transition-all">
+              Laravel & PHP
+            </button>
+            <button type="button" data-repo-cat="frontend" class="repo-filter-btn filter-btn text-xs font-mono px-3 py-2 rounded-lg border border-slate-800 bg-slate-900/60 text-slate-300 transition-all">
+              Vue & Frontend
+            </button>
+            <button type="button" data-repo-cat="devops" class="repo-filter-btn filter-btn text-xs font-mono px-3 py-2 rounded-lg border border-slate-800 bg-slate-900/60 text-slate-300 transition-all">
+              Docker, WSL & DevOps
+            </button>
+            <button type="button" data-repo-cat="ai" class="repo-filter-btn filter-btn text-xs font-mono px-3 py-2 rounded-lg border border-slate-800 bg-slate-900/60 text-slate-300 transition-all">
+              AI & Vibe Coding
+            </button>
+            <button type="button" data-repo-cat="docs" class="repo-filter-btn filter-btn text-xs font-mono px-3 py-2 rounded-lg border border-slate-800 bg-slate-900/60 text-slate-300 transition-all">
+              Panduan & Docs
+            </button>
+          </div>
+        </div>
+
+        <!-- Repo Count Subtitle -->
+        <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-4 px-1">
+          <span id="repo-showing-count">Menampilkan repositori publik pilihan</span>
+          <a href="https://github.com/egovaflavia?tab=repositories" target="_blank" rel="noopener" class="text-emerald-400 hover:underline inline-flex items-center gap-1">
+            <span>Lihat semua 135+ repo di GitHub</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Repositories Grid -->
+        <div id="public-repos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+      </div>
+    </section>
+
+    <!-- HOMESERVER & DEPLOYMENT SECTION -->
+    <section id="homeserver" class="py-20 border-t border-slate-800/70 bg-slate-950/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="glass-card rounded-3xl p-8 sm:p-10 lg:p-12 relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Left Description -->
+            <div class="lg:col-span-7 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
+                <i data-lucide="hard-drive" class="w-3.5 h-3.5"></i>
+                <span>Self-Hosted Infrastructure • egova.my.id</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+                Di-deploy Langsung dari Homeserver Pribadi
+              </h2>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Halaman profil <code class="text-emerald-400 font-mono">egova.my.id</code> dirancang ringan tanpa ketergantungan database eksternal, berjalan di dalam container <strong>Docker (Nginx Alpine)</strong> pada homeserver pribadi dan dihubungkan secara aman menggunakan <strong>Cloudflare Tunnel</strong>.
+              </p>
+
+              <!-- Architecture Flow Pills -->
+              <div class="pt-2 flex flex-wrap items-center gap-2 text-xs font-mono">
+                <div class="px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 flex items-center gap-2">
+                  <i data-lucide="globe" class="w-4 h-4 text-emerald-400"></i>
+                  <span>User (egova.my.id)</span>
+                </div>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-slate-500"></i>
+                <div class="px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 flex items-center gap-2">
+                  <i data-lucide="shield-check" class="w-4 h-4 text-amber-400"></i>
+                  <span>Cloudflare Edge & Tunnel</span>
+                </div>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-slate-500"></i>
+                <div class="px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 flex items-center gap-2">
+                  <i data-lucide="box" class="w-4 h-4 text-cyan-400"></i>
+                  <span>Homeserver Docker (Nginx:Alpine)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Quick Connect Cards -->
+            <div class="lg:col-span-5 space-y-3">
+              <a href="https://github.com/egovaflavia" target="_blank" rel="noopener" class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-emerald-500/50 flex items-center justify-between group transition-all">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-white group-hover:text-emerald-400 transition-colors">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-white">GitHub (@egovaflavia)</div>
+                    <div class="text-xs text-slate-400 font-mono">135+ Public Repos & Open Source</div>
+                  </div>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-emerald-400"></i>
+              </a>
+
+              <a href="https://lokersumbar.info/" target="_blank" rel="noopener" class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-emerald-500/50 flex items-center justify-between group transition-all">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-amber-400">
+                    <i data-lucide="briefcase" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-white">LokerSumbar.info</div>
+                    <div class="text-xs text-slate-400 font-mono">Portal Info Lowongan Kerja Sumatera Barat</div>
+                  </div>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-emerald-400"></i>
+              </a>
+
+              <a href="https://x.com/egovaflavia" target="_blank" rel="noopener" class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-emerald-500/50 flex items-center justify-between group transition-all">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-sky-400">
+                    <i data-lucide="twitter" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-white">X / Twitter (@egovaflavia)</div>
+                    <div class="text-xs text-slate-400 font-mono">Diskusi Tech, Koding & Keseharian</div>
+                  </div>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-emerald-400"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 py-8 bg-[#090d16]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 font-mono">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>© 2019–2026 <strong class="text-white">Egova Flavia</strong> (egova.my.id) • "Agak-agak kiro-kiro"</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Padang, Sumatera Barat</span>
+        <span>•</span>
+        <a href="https://github.com/egovaflavia" target="_blank" rel="noopener" class="hover:text-emerald-400 transition-colors">GitHub</a>
+        <span>•</span>
+        <a href="https://lokersumbar.info/" target="_blank" rel="noopener" class="hover:text-emerald-400 transition-colors">LokerSumbar</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main Application Script -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
